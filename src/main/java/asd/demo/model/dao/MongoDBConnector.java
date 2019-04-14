@@ -24,12 +24,17 @@ public class MongoDBConnector {
     private MongoClientURI uri ;
     private MongoClient client ;
     private MongoDatabase db;
-    private String owner = "Georges034302";
-    private String password = "darkside666";
-    public MongoDBConnector() throws UnknownHostException { connect(); }
+    private String owner;
+    private String password;
+    
+    public MongoDBConnector(String owner, String password) throws UnknownHostException {
+        this.owner = owner;
+        this.password = password; 
+        connect();
+    }
     
     private void connect() throws UnknownHostException{
-        uri  = new MongoClientURI("mongodb://Georges034302:darkside666@ds029496.mlab.com:29496/heroku_59pxdn6j"); 
+        uri  = new MongoClientURI("mongodb://"+owner+":"+password+"@ds029496.mlab.com:29496/heroku_59pxdn6j"); 
         client = new MongoClient(uri);
         db = client.getDatabase(uri.getDatabase());
     }
@@ -39,7 +44,7 @@ public class MongoDBConnector {
         userlist.insertMany(users);
     }    
       
-    public void close(){ client.close(); }    
+    public void close(){ client.close();}    
     public MongoClient getClient(){ return client; }
-    public MongoDatabase createMDB(){ return db; }
+    public MongoDatabase getMDB(){ return db; }
 }

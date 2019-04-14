@@ -3,8 +3,6 @@ package asd.demo.controller;
 import asd.demo.model.User;
 import asd.demo.model.Users;
 import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletContext;
@@ -23,8 +21,8 @@ import javax.xml.bind.JAXBException;
 public class ValidationServlet extends HttpServlet {
 
     @Context
-    private ServletContext application;
-
+    private ServletContext application;    
+   
     private UserApplication getUserApp() throws JAXBException, IOException, Exception {
         synchronized (application) {
             UserApplication userApp = (UserApplication) application.getAttribute("userApp");
@@ -52,12 +50,7 @@ public class ValidationServlet extends HttpServlet {
         String password = request.getParameter("password");
         String name = request.getParameter("name");
         String phone = request.getParameter("phone");
-        String emailErr;
-        String passErr;
-        String nameErr;
-        String phoneErr;
-        String empty;
-
+    
         Validator validator = new Validator();
         User user;
         try {

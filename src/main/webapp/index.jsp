@@ -31,7 +31,8 @@
 
                         </button>
                         <a class="navbar-brand" href="#Register-Div" data-toggle="tab" id="Register-Tab">Register</a>
-                        <a class="navbar-brand" href="#Login-Div" data-toggle="tab" id="Login-Tab">Login</a>                
+                        <a class="navbar-brand" href="#Login-Div" data-toggle="tab" id="Login-Tab">Login</a>
+                        <a class="navbar-brand" href="#MLab-Div" data-toggle="tab" id="MLab-Tab">MLab Connect</a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right"> 

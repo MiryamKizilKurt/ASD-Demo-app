@@ -17,23 +17,21 @@
         <link rel="stylesheet" href="css/demo.css">
     </head>
     <%
-        String emailErr = request.getParameter("emailErr");
-        String passErr = request.getParameter("passErr");
-        String emptyErr = request.getParameter("empty");
+        String status = request.getParameter("status");       
     %>
     <body style="background:none transparent;">
 
         <div class="row">
-            <form class="login-form" action="loginAction.jsp" method="post" target="_parent">
-                <p class="form_title">Login Details:  </p>&emsp;<span class="error"> <c:if test="${emptyErr!=null}"><c:out value="${emptyErr}"/></c:if></span>
+            <form class="login-form" action="ConnServlet" method="post" target="_parent">
+                <p class="form_title">MLab Admin Login:  </p>&emsp;<span class="error"> <c:if test="${status!=null}"><c:out value="${status}"/></c:if></span>
                     <div class="form-group" id="username">
-                        <input class="form-input" placeholder="Email" name="email" required="true">&emsp;<span class="error"><c:if test="${emailErr!=null}"><c:out value="${emailErr}"/></c:if></span>                                       
+                        <input class="form-input" placeholder="Admin ID" name="adminemail" required="true">                                       
                     </div>
                     <div class="form-group" id="password">
-                        <input type="password" class="form-input" name ="password" placeholder="Password" required="true">&emsp;<span class="error"><c:if test="${passErr!=null}"><c:out value="${passErr}"/></c:if></span>
+                        <input type="password" class="form-input" name ="adminpassword" placeholder="Password" required="true">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="login-button"/>                    
+                        <input type="submit" value="Connect" class="login-button"/>                    
                     </div>
                 </form>         
             </div>        

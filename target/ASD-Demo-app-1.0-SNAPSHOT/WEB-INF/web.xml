@@ -4,9 +4,17 @@
         <servlet-name>ValidationServlet</servlet-name>
         <servlet-class>asd.demo.controller.ValidationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ConnServlet</servlet-name>
+        <servlet-class>asd.demo.controller.ConnServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ValidationServlet</servlet-name>
         <url-pattern>/ValidationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConnServlet</servlet-name>
+        <url-pattern>/ConnServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

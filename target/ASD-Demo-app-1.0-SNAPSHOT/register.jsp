@@ -42,8 +42,7 @@
                         <input type="submit" value="Register" class="login-button"/>                    
                     </div>
                 </form>         
-            </div>
-        <%session.invalidate();%>
+            </div>        
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
         <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>       

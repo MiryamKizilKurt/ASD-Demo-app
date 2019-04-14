@@ -37,8 +37,8 @@
         session.setAttribute("user", user);
         users.addUser(user);
         userApp.updateXML(users, filePath);
-        MongoDBConnector db = new MongoDBConnector();
-        db.add(user);
+        MongoDBConnector connector = (MongoDBConnector)session.getAttribute("connector");
+        if(connector != null ) connector.add(user); else out.print("Cannot add user");
 
     %>
     <body style="background:none transparent;"> 

@@ -27,6 +27,9 @@ $(function () {
     $("#Myaccount-Tab").click(function () {
         $("#Display-frame").attr("src", "edit_user.jsp");
     });
+    $("#MLab-Tab").click(function () {
+        $("#Display-frame").attr("src", "mLab.jsp");
+    });
 });
 
 

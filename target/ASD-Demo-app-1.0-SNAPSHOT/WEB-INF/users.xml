@@ -19,33 +19,9 @@
         <phone>(03) 1234-0000</phone>
     </user>
     <user>
-        <name>John Smith</name>
-        <email>john.smith@uts.com</email>
-        <password>helloworld123</password>
-        <phone>02 9789 0000</phone>
-    </user>
-    <user>
-        <name>John Smith</name>
-        <email>john.smith@uts.com</email>
-        <password>helloworld123</password>
-        <phone>02 9789 0000</phone>
-    </user>
-    <user>
-        <name>John Smith</name>
-        <email>john.smith@uts.com</email>
-        <password>helloworld123</password>
-        <phone>02 9789 0000</phone>
-    </user>
-    <user>
-        <name>John Smith</name>
-        <email>john.smith@uts.com</email>
-        <password>helloworld123</password>
-        <phone>02 9789 0000</phone>
-    </user>
-    <user>
-        <name>John Smith</name>
-        <email>john.smith@uts.com</email>
-        <password>helloworld123</password>
-        <phone>02 9789 0000</phone>
+        <name>Jim Poland</name>
+        <email>poland.j@gmail.com</email>
+        <password>newworld</password>
+        <phone>02 8889 9900</phone>
     </user>
 </users>
