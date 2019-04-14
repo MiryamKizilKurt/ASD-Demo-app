@@ -4,6 +4,7 @@
     Author     : george
 --%>
 
+<%@page import="asd.demo.model.dao.MongoDBConnector"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="asd.demo.model.*"%>
 <!DOCTYPE html>
 <html>
@@ -36,6 +37,8 @@
         session.setAttribute("user", user);
         users.addUser(user);
         userApp.updateXML(users, filePath);
+        MongoDBConnector db = new MongoDBConnector();
+        db.add(user);
 
     %>
     <body style="background:none transparent;"> 

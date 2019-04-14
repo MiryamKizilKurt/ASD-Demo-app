@@ -1,21 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <users>
     <user>
         <name>Ryan Bradley</name>
-        <email>ryan@bradley.com</email>      
-        <password>blahblah88</password> 
-        <phone>(02) 9999-1111</phone>       
+        <email>ryan@bradley.com</email>
+        <password>blahblah88</password>
+        <phone>(02) 9999-1111</phone>
     </user>
     <user>
         <name>Joe Bloggs</name>
-        <email>joe@bloggs.com</email>        
-        <password>foobar222</password>     
-        <phone>(04) 2288-1122</phone>   
+        <email>joe@bloggs.com</email>
+        <password>foobar222</password>
+        <phone>(04) 2288-1122</phone>
     </user>
     <user>
         <name>Georges Bou Ghantous</name>
-        <email>georges.boughantous@gmail.com</email>    
-        <password>tutorial124</password>    
-        <phone>(03) 1234-0000</phone>         
-    </user> 
+        <email>georges.boughantous@gmail.com</email>
+        <password>tutorial124</password>
+        <phone>(03) 1234-0000</phone>
+    </user>
+    <user>
+        <name>John Smith</name>
+        <email>john.smith@uts.com</email>
+        <password>helloworld123</password>
+        <phone>02 9789 0000</phone>
+    </user>
+    <user>
+        <name>John Smith</name>
+        <email>john.smith@uts.com</email>
+        <password>helloworld123</password>
+        <phone>02 9789 0000</phone>
+    </user>
+    <user>
+        <name>John Smith</name>
+        <email>john.smith@uts.com</email>
+        <password>helloworld123</password>
+        <phone>02 9789 0000</phone>
+    </user>
+    <user>
+        <name>John Smith</name>
+        <email>john.smith@uts.com</email>
+        <password>helloworld123</password>
+        <phone>02 9789 0000</phone>
+    </user>
+    <user>
+        <name>John Smith</name>
+        <email>john.smith@uts.com</email>
+        <password>helloworld123</password>
+        <phone>02 9789 0000</phone>
+    </user>
 </users>
