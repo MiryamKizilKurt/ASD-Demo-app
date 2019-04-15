@@ -1,4 +1,5 @@
 <%@page import="asd.demo.model.*"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
     <head>        
@@ -12,8 +13,12 @@
         <script type="text/javascript" src="js/script.js"></script>  
         <script type="text/javascript" src="js/animation.js"></script> 
         <link rel="stylesheet" type="text/css" href="css/style.css">  
+        <link rel="stylesheet" type="text/css" href="css/led.css">
     </head>
     <title>Home</title>
+    <%
+        String status = (String)session.getAttribute("status");        
+    %>
     <body onload="startTime()">           
         <div class="bs-docs-header" id="content" tabindex="-1">
             <span class="time" id="time" ></span>
@@ -33,6 +38,11 @@
                         <a class="navbar-brand" href="#Register-Div" data-toggle="tab" id="Register-Tab">Register</a>
                         <a class="navbar-brand" href="#Login-Div" data-toggle="tab" id="Login-Tab">Login</a>
                         <a class="navbar-brand" href="#MLab-Div" data-toggle="tab" id="MLab-Tab">MLab Connect</a>
+                        <div class="container">
+                            <div class="led-box">
+                                <div class="<%= (status != null) ? "led-green" : "led-red"%>"></div>                                
+                            </div>                            
+                        </div>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right"> 
@@ -45,7 +55,7 @@
                                 </ul>
                             </li> 
                         </ul>
-                                                                       
+
                     </div> 
                 </div>
             </nav>           
@@ -60,11 +70,11 @@
         <div class="footer">            
             <h2 id="buttons-options" class="title">Control Panel</h2>
             <div class="bs-glyphicons" style="padding-bottom:10px;">          
-                <a class="btn btn-success glyphicon glyphicon-refresh" href="#" id="Default-Tab"></a>             
-                <a class="btn btn-primary glyphicon glyphicon-save" href="https://github.com/Georges034302" target="_blank"></a>               
-                <a class="btn btn-info glyphicon glyphicon-cloud" href="https://www.google.com/drive/" target="_blank"></a>            
-                <a class="btn btn-warning glyphicon glyphicon-pencil" href="http://collabedit.com/" target="_blank"></a>           
-                <a class="btn btn-danger glyphicon glyphicon-send" href="mailto: "></a>
+                <a class="btn btn-default glyphicon glyphicon-refresh"  data-toggle="tooltip" title="Refresh" href="#" iclass="tooltip"d="Default-Tab"></a>             
+                <a class="btn btn-primary glyphicon glyphicon-level-up" data-toggle="tooltip" title="GitHub" href="https://github.com/Georges034302" target="_blank"></a>               
+                <a class="btn btn-info glyphicon glyphicon-cloud" data-toggle="tooltip" title="Google Drive" href="https://www.google.com/drive/" target="_blank"></a>            
+                <a class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="tooltip" title="Collaborate" href="http://collabedit.com/" target="_blank"></a>           
+                <a class="btn btn-primary glyphicon glyphicon-send" data-toggle="tooltip" title="Email" href="mailto: "></a>
             </div>
         </div>  
         <script src="webjars/jquery/2.1.4/jquery.js"></script>

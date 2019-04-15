@@ -40,3 +40,14 @@ function reload() {
     document.getElementById('results-frame').src += '';
 }
 
+//Led animation
+$( function() {
+  var $winHeight = $( window ).height()
+  $( '.container' ).height( $winHeight );
+});
+
+//Buttons tooltip
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+

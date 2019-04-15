@@ -12,7 +12,7 @@
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/animation.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">   
-
+        <link rel="stylesheet" type="text/css" href="css/led.css">
     </head>
 
     <body onload="startTime()">           
@@ -33,15 +33,23 @@
                     String log = " &lt " + user.getName() + " &gt";
 
             %>
+            <%
+                 String status = (String)session.getAttribute("status");        
+            %>
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>                             
+                            <span class="icon-bar"></span>                                                         
                         </button>
-                        <a class="navbar-brand" href="#Myaccount-Div" data-toggle="tab" id="Myaccount-Tab">My Account</a>                      
+                        <a class="navbar-brand" href="#Myaccount-Div" data-toggle="tab" id="Myaccount-Tab">My Account</a>      
+                        <a class="navbar-brand" >MLab Status</a>
+                        <div class="container">
+                            <div class="led-box">
+                                <div class="<%= (status != null) ? "led-green" : "led-red"%>"></div>                                
+                            </div>                            
+                        </div>
                     </div>
                     <ul class="nav navbar-nav navbar-right">                            
                         <li><a href="logout.jsp" id="Logout-Tab" ><span style="color:#70bd24; font-size: 14px;">You are logging in as: <%=log%></span>&emsp;<span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
@@ -60,13 +68,16 @@
             </div>
         </div>
         <div class="footer" >            
-            <h2 id="buttons-options" class="title">Control Panel</h2>
+            <h2 id="buttons-options" class="title">DRA Pipeline</h2>
             <div class="bs-glyphicons" style="padding-bottom:10px;">          
-                <a class="btn btn-success glyphicon glyphicon-refresh" href="#" id="Default-Tab"></a>             
-                <a class="btn btn-primary glyphicon glyphicon-save" href="https://github.com/Georges034302/lab_demo" target="_blank"></a>               
-                <a class="btn btn-info glyphicon glyphicon-cloud" href="https://www.google.com/drive/" target="_blank"></a>            
-                <a class="btn btn-warning glyphicon glyphicon-pencil" href="http://collabedit.com/" target="_blank"></a>           
-                <a class="btn btn-danger glyphicon glyphicon-send" href="mailto: "></a>
+                <a class="btn btn-default glyphicon glyphicon-refresh" data-toggle="tooltip" title="Refresh" href="#" id="Default-Tab"></a>             
+                <a class="btn btn-primary glyphicon glyphicon-level-up" data-toggle="tooltip" title="GitHub" href="https://github.com/" target="_blank"></a>               
+                <a class="btn btn-primary glyphicon glyphicon-comment" data-toggle="tooltip" title="Slack" href="https://slack.com/" target="_blank"></a>            
+                <a class="btn btn-success glyphicon glyphicon-wrench" data-toggle="tooltip" title="Codeship" href="https://app.codeship.com/sessions/new" target="_blank"></a>           
+                <a class="btn btn-info glyphicon glyphicon-cloud" data-toggle="tooltip" title="Heroku" href="https://dashboard.heroku.com/apps"></a>
+                <a class="btn btn-info glyphicon glyphicon-cloud" data-toggle="tooltip" title="Google App Engine" href="https://cloud.google.com/appengine/"></a>
+                <a class="btn btn-warning glyphicon glyphicon-save" data-toggle="tooltip" title="MongoDB" href="https://www.mlab.com/"></a>
+                <a class="btn btn-danger glyphicon glyphicon-alert" data-toggle="tooltip" title="Papertrail" href="https://papertrailapp.com/"></a>
             </div>
         </div>  
         <script src="webjars/jquery/2.1.4/jquery.js"></script>
