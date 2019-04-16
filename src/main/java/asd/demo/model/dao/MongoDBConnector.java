@@ -21,30 +21,51 @@ import asd.demo.model.*;
 public class MongoDBConnector {
     
     private List<Document> users = new ArrayList();
-    private MongoClientURI uri ;
-    private MongoClient client ;
+    private MongoClientURI uri;
+    private MongoClient client;
     private MongoDatabase db;
     private String owner;
     private String password;
     
     public MongoDBConnector(String owner, String password) throws UnknownHostException {
         this.owner = owner;
-        this.password = password; 
+        this.password = password;        
         connect();
     }
     
-    private void connect() throws UnknownHostException{
-        uri  = new MongoClientURI("mongodb://"+owner+":"+password+"@ds029496.mlab.com:29496/heroku_59pxdn6j"); 
+    private void connect() throws UnknownHostException {
+        uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");        
         client = new MongoClient(uri);
         db = client.getDatabase(uri.getDatabase());
     }
-    public void add(User user){
-        users.add(new Document("Username",user.getEmail()).append("Password", user.getPassword()).append("Name", user.getName()).append("Phone", user.getPhone()));
+
+    public void add(User user) {
+        users.add(new Document("Username", user.getEmail()).append("Password", user.getPassword()).append("Name", user.getName()).append("Phone", user.getPhone()));
         MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
         userlist.insertMany(users);
     }    
-      
-    public void close(){ client.close();}    
-    public MongoClient getClient(){ return client; }
-    public MongoDatabase getMDB(){ return db; }
+    
+    public boolean User(String email) {
+        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
+        List<Document> documents = (List<Document>) userlist.find().into(new ArrayList<Document>());
+        for (Document document : documents) {
+            Document user = (Document) document.get(document);
+            String useremail = user.getString("Email");
+            return useremail.equals(email);
+        }
+        
+        return false;
+    }
+
+    public void close() {
+        client.close();
+    }    
+
+    public MongoClient getClient() {
+        return client;
+    }
+
+    public MongoDatabase getMDB() {
+        return db;
+    }
 }

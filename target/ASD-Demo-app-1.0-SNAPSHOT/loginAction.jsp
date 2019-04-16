@@ -1,3 +1,4 @@
+<%@page import="asd.demo.model.dao.MongoDBConnector"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" import="asd.demo.controller.*" import="asd.demo.model.*"%>
 <html>
     <head>
@@ -16,6 +17,8 @@
             String password = request.getParameter("password");
             User user = users.login(email, password);
 
+            MongoDBConnector connector = (MongoDBConnector)session.getAttribute("connector");
+            
             if (validator.checkEmpty(email, password)) {
                 session.setAttribute("emptyErr", "All fields are mendatory");
                 response.sendRedirect("index.jsp");
@@ -32,6 +35,7 @@
                 session.setAttribute("existErr", "User does not exist!");
                 response.sendRedirect("main.jsp");
             }
+
         %>
     </body>
 </html>
