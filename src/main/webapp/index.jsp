@@ -70,7 +70,7 @@
         <div class="footer">            
             <h2 id="buttons-options" class="title">Control Panel</h2>
             <div class="bs-glyphicons" style="padding-bottom:10px;">          
-                <a class="btn btn-default glyphicon glyphicon-refresh"  data-toggle="tooltip" title="Refresh" href="#" iclass="tooltip"d="Default-Tab"></a>             
+                <a class="btn btn-default glyphicon glyphicon-refresh"  data-toggle="tooltip" title="Refresh" href="#" iclass="tooltip"id="Default-Tab"></a>             
                 <a class="btn btn-primary glyphicon glyphicon-level-up" data-toggle="tooltip" title="GitHub" href="https://github.com/Georges034302" target="_blank"></a>               
                 <a class="btn btn-info glyphicon glyphicon-cloud" data-toggle="tooltip" title="Google Drive" href="https://www.google.com/drive/" target="_blank"></a>            
                 <a class="btn btn-warning glyphicon glyphicon-pencil" data-toggle="tooltip" title="Collaborate" href="http://collabedit.com/" target="_blank"></a>           
