@@ -24,6 +24,10 @@ public class User  implements Serializable{
         this.phone = phone;
     }
 
+    public boolean match(String email){
+        return this.email.equalsIgnoreCase(email.trim());
+    }
+    
     public String getPhone() {
         return phone;
     }

@@ -1,0 +1,45 @@
+package asd.demo.controller;
+
+import asd.demo.model.User;
+import asd.demo.model.dao.MongoDBConnector;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ *
+ * @author George
+ */
+public class ValidatorServlet extends HttpServlet {
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        Validator validator = new Validator();
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        User user = null;
+        MongoDBConnector connector = (MongoDBConnector) session.getAttribute("connector");
+
+        if (!validator.validateEmail(email)) {
+            session.setAttribute("emailErr", "Incorrect email format");            
+            request.getRequestDispatcher("index.jsp").include(request, response);
+        } else if (!validator.validatePassword(password)) {
+            session.setAttribute("passErr", "Incorrect password format");
+            request.getRequestDispatcher("index.jsp").include(request, response);
+        } else {
+            try {
+                user = connector.user(email, password);
+                session.setAttribute("user", user);
+                request.getRequestDispatcher("main.jsp").include(request, response);
+            } catch (NullPointerException ex) {
+                session.setAttribute("existErr", "User does not exist!");
+                request.getRequestDispatcher("main.jsp").include(request, response);
+            }
+        }
+    }
+}

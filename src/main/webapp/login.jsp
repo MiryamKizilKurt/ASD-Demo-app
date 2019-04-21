@@ -24,7 +24,7 @@
     <body style="background:none transparent;">
 
         <div class="row">
-            <form class="login-form" action="loginAction.jsp" method="post" target="_parent">
+            <form class="login-form" action="ValidatorServlet" method="post" target="_parent">
                 <p class="form_title">Login Details:  </p>&emsp;<span class="error"> <c:if test="${emptyErr!=null}"><c:out value="${emptyErr}"/></c:if></span>
                     <div class="form-group" id="username">
                         <input class="form-input" placeholder="Email" name="email" required="true">&emsp;<span class="error"><c:if test="${emailErr!=null}"><c:out value="${emailErr}"/></c:if></span>                                       

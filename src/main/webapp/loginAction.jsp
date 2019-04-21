@@ -15,9 +15,7 @@
         <%
             String email = request.getParameter("email");
             String password = request.getParameter("password");
-            User user = users.login(email, password);
-
-            MongoDBConnector connector = (MongoDBConnector)session.getAttribute("connector");
+            User user = users.login(email, password);                   
             
             if (validator.checkEmpty(email, password)) {
                 session.setAttribute("emptyErr", "All fields are mendatory");
@@ -34,7 +32,7 @@
             } else {
                 session.setAttribute("existErr", "User does not exist!");
                 response.sendRedirect("main.jsp");
-            }
+            }            
 
         %>
     </body>
