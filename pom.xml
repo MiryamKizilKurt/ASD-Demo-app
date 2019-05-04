@@ -15,6 +15,12 @@
     </properties>
     
     <dependencies>
+        <!-- GAE SDK dependency -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>1.9.65</version>
+        </dependency>
         <!-- mLab MongoDB driver dependency -->
         <dependency>
             <groupId>org.mongodb</groupId>
@@ -76,7 +82,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>            
         </plugins>
     </build>
 
