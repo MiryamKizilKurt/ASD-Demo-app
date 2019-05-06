@@ -3,7 +3,7 @@
     <!--
       Name of the app on GAE
     -->
-    <application>propane-primacy-193602</application>
+    <application>asd-demo-app</application>
     <version>1</version>
     <runtime>java8</runtime>
     <!--
