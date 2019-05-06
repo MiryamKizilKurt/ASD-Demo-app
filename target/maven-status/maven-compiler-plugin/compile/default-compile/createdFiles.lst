@@ -4,4 +4,5 @@ asd\demo\controller\UserApplication.class
 asd\demo\controller\Validator.class
 asd\demo\model\dao\MongoDBConnector.class
 asd\demo\controller\ConnServlet.class
+.netbeans_automatic_build
 asd\demo\model\User.class
