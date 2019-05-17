@@ -36,21 +36,13 @@ public class MongoDBConnector {
         connect();
     }
 
-    public static void main(String[] args) throws UnknownHostException {
-        MongoDBConnector db = new MongoDBConnector("Georges034302", "darkside666");
-        db.connect();
-        db.showUsers();
-        User user = db.user("john.smith@uts.com","helloworld123");
-        System.out.println("User email: " + user.getEmail());
-        db.showall(db.loadUsers());
-    }
-
     public void showall(Users users) {
         for (User u : users.getList()) {
             System.out.println(u.getName());
         }
     }
 
+    //Replace the mLab URL with your Team current URL
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
         client = new MongoClient(uri);
@@ -59,7 +51,7 @@ public class MongoDBConnector {
 
     public void add(User user) {
         users.add(new Document("Username", user.getEmail()).append("Password", user.getPassword()).append("Name", user.getName()).append("Phone", user.getPhone()));
-        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
+        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users"); //Create a collection ASD-Demo-app-users on mLab
         userlist.insertMany(users);
     }
 

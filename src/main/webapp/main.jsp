@@ -73,7 +73,7 @@
                 <a class="btn btn-default glyphicon glyphicon-refresh" data-toggle="tooltip" title="Refresh" href="#" id="Default-Tab"></a>             
                 <a class="btn btn-primary glyphicon glyphicon-level-up" data-toggle="tooltip" title="GitHub" href="https://github.com/" target="_blank"></a>               
                 <a class="btn btn-primary glyphicon glyphicon-comment" data-toggle="tooltip" title="Slack" href="https://slack.com/" target="_blank"></a>            
-                <a class="btn btn-success glyphicon glyphicon-wrench" data-toggle="tooltip" title="Codeship" href="https://app.codeship.com/sessions/new" target="_blank"></a>           
+                <a class="btn btn-success glyphicon glyphicon-wrench" data-toggle="tooltip" title="Codeship" href="https://app.codeship.com/home" target="_blank"></a>           
                 <a class="btn btn-info glyphicon glyphicon-cloud" data-toggle="tooltip" title="Heroku" href="https://dashboard.heroku.com/apps" target="_blank"></a>
                 <a class="btn btn-info glyphicon glyphicon-cloud" data-toggle="tooltip" title="Google App Engine" href="https://cloud.google.com/appengine/" target="_blank"></a>
                 <a class="btn btn-warning glyphicon glyphicon-save" data-toggle="tooltip" title="MongoDB" href="https://www.mlab.com/" target="_blank"></a>
