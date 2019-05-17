@@ -1,10 +1,8 @@
 /*
  * Author: Georges Bou Ghantous
  *
- * This class provides the methods to establish connection between maven-app-heroku
- * and MongoDBLab cloud Database and save IoT generated data at button click on injex.jsp.
- * The python scripts excuted remotely using SSHExec.java methods on RPIB collect data from
- * sensors (Sensor_A and Sensor_B). The data is saved dynamically on mLab cloud database as
+ * This class provides the methods to establish connection between ASD-Demo-app
+ * and MongoDBLab cloud Database. The data is saved dynamically on mLab cloud database as
  * as JSON format.
  */
 package asd.demo.model.dao;
