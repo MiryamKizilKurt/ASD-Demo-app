@@ -25,7 +25,7 @@ public class MongoDBConnector implements Serializable {
     private List<Document> users = new ArrayList();
     private MongoClientURI uri;
     private MongoClient client;
-   
+    private MongoDBClientImpl clientImpl;
     private MongoDatabase db;
     private String owner;
     private String password;
@@ -45,7 +45,8 @@ public class MongoDBConnector implements Serializable {
     //Replace the mLab URL with your Team current URL
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
-        client = new MongoDBClientImpl(uri).getMongoClient();
+        clientImpl = new MongoDBClientImpl(uri);
+        client = clientImpl.getMongoClient();
         db = client.getDatabase(uri.getDatabase());
     }
 
@@ -89,6 +90,9 @@ public class MongoDBConnector implements Serializable {
         return client;
     }
 
+    public MongoDBClientImpl getClientImpl() {
+        return clientImpl;
+    }
     public MongoDatabase getMDB() {
         return db;
     }
