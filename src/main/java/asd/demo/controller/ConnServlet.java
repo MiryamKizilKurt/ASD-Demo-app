@@ -3,6 +3,7 @@ package asd.demo.controller;
 import asd.demo.model.dao.MongoDBConnector;
 import com.mongodb.MongoClient;
 import java.io.IOException;
+import java.io.Serializable;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +15,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author George
  */
-public class ConnServlet extends HttpServlet {
+public class ConnServlet extends HttpServlet implements Serializable{
     private MongoDBConnector connector;  
      
     @Override 
