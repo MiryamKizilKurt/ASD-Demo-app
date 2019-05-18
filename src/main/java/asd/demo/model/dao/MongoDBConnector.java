@@ -87,7 +87,7 @@ public class MongoDBConnector implements Serializable {
     }
 
     public MongoClient getClient() {
-        return client;
+        return clientImpl.getMongoClient();
     }
 
     public MongoDBClientImpl getClientImpl() {
