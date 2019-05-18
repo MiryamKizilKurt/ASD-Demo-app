@@ -18,8 +18,9 @@ import asd.demo.model.*;
 import com.mongodb.client.MongoCursor;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
+import java.io.Serializable;
 
-public class MongoDBConnector {
+public class MongoDBConnector implements Serializable {
 
     private List<Document> users = new ArrayList();
     private MongoClientURI uri;
