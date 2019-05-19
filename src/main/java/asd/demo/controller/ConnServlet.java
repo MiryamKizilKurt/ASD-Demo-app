@@ -28,8 +28,10 @@ public class ConnServlet extends HttpServlet {
         HttpSession session = request.getSession();              
         String status = (connector != null) ? "Connected to mLab" : "Disconnected from mLab";        
         
-        session.setAttribute("status", status);               
-        session.setAttribute("connector", connector);  
+        session.setAttribute("status", status); 
+        session.setAttribute("adminemail", adminemail);
+        session.setAttribute("adminpassword", adminpass);
+        //session.setAttribute("connector", connector);  
         RequestDispatcher rs = request.getRequestDispatcher("index.jsp");
         rs.forward(request, response);
     }    

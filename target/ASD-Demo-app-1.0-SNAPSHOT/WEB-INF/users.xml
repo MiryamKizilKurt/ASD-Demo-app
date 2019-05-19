@@ -24,4 +24,16 @@
         <password>helloworld123</password>
         <phone>02 9789 0000</phone>
     </user>
+    <user>
+        <name>Sally Cairns</name>
+        <email>sally.c@uts.com</email>
+        <password>newuser123</password>
+        <phone>02 8889 9900</phone>
+    </user>
+    <user>
+        <name>Sally Cairns</name>
+        <email>sally.c@uts.com</email>
+        <password>helloworld123</password>
+        <phone>02 9789  1111</phone>
+    </user>
 </users>
