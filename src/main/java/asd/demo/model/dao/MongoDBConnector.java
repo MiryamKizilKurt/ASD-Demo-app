@@ -15,6 +15,7 @@ import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import java.util.*;
 import asd.demo.model.*;
+import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoCursor;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
@@ -45,8 +46,9 @@ public class MongoDBConnector implements Serializable {
     //Replace the mLab URL with your Team current URL
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
-        clientImpl = new MongoDBClientImpl(uri);
-        client = clientImpl.getMongoClient();
+        //clientImpl = new MongoDBClientImpl(uri);
+        client = new MongoClient(uri);
+        client.setWriteConcern(WriteConcern.SAFE);
         db = client.getDatabase(uri.getDatabase());
     }
 
