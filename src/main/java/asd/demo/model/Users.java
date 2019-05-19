@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "users")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Users implements Serializable {
+public class Users {
 
     @XmlElement(name = "user")
     private ArrayList<User> list = new ArrayList<>();

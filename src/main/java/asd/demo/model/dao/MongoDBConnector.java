@@ -15,18 +15,16 @@ import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import java.util.*;
 import asd.demo.model.*;
-import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoCursor;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
-import java.io.Serializable;
 
-public class MongoDBConnector implements Serializable {
+public class MongoDBConnector {
 
     private List<Document> users = new ArrayList();
     private MongoClientURI uri;
     private MongoClient client;
-    private MongoDBClientImpl clientImpl;
+    //private MongoDBClientImpl clientImpl;
     private MongoDatabase db;
     private String owner;
     private String password;
@@ -47,8 +45,7 @@ public class MongoDBConnector implements Serializable {
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
         //clientImpl = new MongoDBClientImpl(uri);
-        client = new MongoClient(uri);
-        client.setWriteConcern(WriteConcern.SAFE);
+        client = new MongoClient(uri);        
         db = client.getDatabase(uri.getDatabase());
     }
 
@@ -89,12 +86,9 @@ public class MongoDBConnector implements Serializable {
     }
 
     public MongoClient getClient() {
-        return clientImpl.getMongoClient();
+        return this.client;
     }
 
-    public MongoDBClientImpl getClientImpl() {
-        return clientImpl;
-    }
     public MongoDatabase getMDB() {
         return db;
     }
