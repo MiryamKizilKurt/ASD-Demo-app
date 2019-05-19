@@ -24,10 +24,19 @@ public class MongoDBConnector {
     private List<Document> users = new ArrayList();
     private String owner;
     private String password;
-   
+
+    public MongoDatabase getMongoDB(){
+       MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
+       MongoDatabase db;
+       try (MongoClient client = new MongoClient(uri)) {
+            db = client.getDatabase(uri.getDatabase());
+       }
+       return db;
+    }
+    
     public MongoDBConnector(String owner, String password) throws UnknownHostException {
         this.owner = owner;
-        this.password = password;      
+        this.password = password;
     }
 
     public void showall(Users users) {
@@ -35,8 +44,8 @@ public class MongoDBConnector {
             System.out.println(u.getName());
         }
     }
-    
-    public void add(User user) {    
+
+    public void add(User user) {
         MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
@@ -74,15 +83,23 @@ public class MongoDBConnector {
         return users;
     }
 
-    public User user(String email,String password) {
+    public User user(String email, String password) {
         MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
         User user;
         try (MongoClient client = new MongoClient(uri)) {
             MongoDatabase db = client.getDatabase(uri.getDatabase());
             MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
-            Document doc = userlist.find(and(eq("Username", email),eq("Password",password))).first();
+            Document doc = userlist.find(and(eq("Username", email), eq("Password", password))).first();
             user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
         }
         return user;
-    }   
+    }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
 }
