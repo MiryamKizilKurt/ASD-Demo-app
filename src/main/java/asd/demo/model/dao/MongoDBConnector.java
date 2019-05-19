@@ -8,30 +8,29 @@
 package asd.demo.model.dao;
 
 import java.net.UnknownHostException;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import java.util.*;
 import asd.demo.model.*;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
-import java.io.Serializable;
 
-public class MongoDBConnector implements Serializable{
+public class MongoDBConnector {
 
     private List<Document> users = new ArrayList();
-    private MongoClientURI uri;
-    //private MongoDatabase db;
     private String owner;
     private String password;
-
+    //private MongoClientURI uri;    
+   // private MongoClient client;
+    //private MongoDatabase db;
     public MongoDBConnector(String owner, String password) throws UnknownHostException {
         this.owner = owner;
         this.password = password;
-        connect();
+        //connect();
     }
 
     public void showall(Users users) {
@@ -39,51 +38,60 @@ public class MongoDBConnector implements Serializable{
             System.out.println(u.getName());
         }
     }
-
+    /*
     //Replace the mLab URL with your Team current URL
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
-        //MongoClient client = new MongoClient(uri);        
-        //db = client.getDatabase(uri.getDatabase());
-    }
-
-    public void add(User user) {
-        MongoClient client = new MongoClient(uri);        
-        MongoDatabase db = client.getDatabase(uri.getDatabase());
-        users.add(new Document("Username", user.getEmail()).append("Password", user.getPassword()).append("Name", user.getName()).append("Phone", user.getPhone()));
-        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users"); //Create a collection ASD-Demo-app-users on mLab
-        userlist.insertMany(users);
+        client = new MongoClient(uri);        
+        db = client.getDatabase(uri.getDatabase());
+    }*/
+    public void add(User user) {    
+        MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            users.add(new Document("Username", user.getEmail()).append("Password", user.getPassword()).append("Name", user.getName()).append("Phone", user.getPhone()));
+            MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users"); //Create a collection ASD-Demo-app-users on mLab
+            userlist.insertMany(users);
+        }
     }
 
     public void showUsers() {
-        MongoClient client = new MongoClient(uri);        
-        MongoDatabase db = client.getDatabase(uri.getDatabase());
-        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
-        try (MongoCursor<Document> cursor = userlist.find().iterator()) {
-            while (cursor.hasNext()) {
-                System.out.println(cursor.next().toJson());
+        MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
+            try (MongoCursor<Document> cursor = userlist.find().iterator()) {
+                while (cursor.hasNext()) {
+                    System.out.println(cursor.next().toJson());
+                }
             }
         }
     }
 
     public Users loadUsers() {
-        MongoClient client = new MongoClient(uri);        
-        MongoDatabase db = client.getDatabase(uri.getDatabase());
-        Users users = new Users();
-        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
-        for (Document doc : userlist.find()) {
-            User user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
-            users.addUser(user);
+        MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
+        Users users;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            users = new Users();
+            MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
+            for (Document doc : userlist.find()) {
+                User user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
+                users.addUser(user);
+            }
         }
         return users;
     }
 
     public User user(String email,String password) {
-        MongoClient client = new MongoClient(uri);        
-        MongoDatabase db = client.getDatabase(uri.getDatabase());
-        MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
-        Document doc = userlist.find(and(eq("Username", email),eq("Password",password))).first();
-        User user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
+        MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
+        User user;
+        try (MongoClient client = new MongoClient(uri)) {
+            MongoDatabase db = client.getDatabase(uri.getDatabase());
+            MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
+            Document doc = userlist.find(and(eq("Username", email),eq("Password",password))).first();
+            user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
+        }
         return user;
     }   
 }

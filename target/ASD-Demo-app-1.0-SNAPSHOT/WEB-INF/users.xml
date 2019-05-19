@@ -24,10 +24,4 @@
         <password>helloworld123</password>
         <phone>02 9789 0000</phone>
     </user>
-    <user>
-        <name>John Smith</name>
-        <email>john.smith@uts.com</email>
-        <password>helloworld123</password>
-        <phone>02 9789 1111</phone>
-    </user>
 </users>
