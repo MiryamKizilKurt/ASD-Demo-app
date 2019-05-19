@@ -18,12 +18,13 @@ import asd.demo.model.*;
 import com.mongodb.client.MongoCursor;
 import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
+import java.io.Serializable;
 
-public class MongoDBConnector {
+public class MongoDBConnector implements Serializable{
 
     private List<Document> users = new ArrayList();
     private MongoClientURI uri;
-    private MongoClient client;
+    //private MongoClient client;
     //private MongoDBClientImpl clientImpl;
     private MongoDatabase db;
     private String owner;
@@ -44,8 +45,8 @@ public class MongoDBConnector {
     //Replace the mLab URL with your Team current URL
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
-        //clientImpl = new MongoDBClientImpl(uri);
-        client = new MongoClient(uri);        
+        MongoDBClientImpl clientImpl = new MongoDBClientImpl(uri);
+        MongoClient client = new MongoClient(uri);        
         db = client.getDatabase(uri.getDatabase());
     }
 
@@ -80,7 +81,7 @@ public class MongoDBConnector {
         User user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
         return user;
     }
-
+/*
     public void close() {
         client.close();
     }
@@ -88,7 +89,7 @@ public class MongoDBConnector {
     public MongoClient getClient() {
         return this.client;
     }
-
+*/
     public MongoDatabase getMDB() {
         return db;
     }
