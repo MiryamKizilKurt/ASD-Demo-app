@@ -2,7 +2,6 @@ asd\demo\model\Users.class
 asd\demo\controller\ValidatorServlet.class
 asd\demo\controller\UserApplication.class
 asd\demo\controller\Validator.class
-asd\demo\model\dao\MongoDBClientImpl.class
 asd\demo\model\dao\MongoDBConnector.class
 asd\demo\controller\ConnServlet.class
 asd\demo\model\User.class

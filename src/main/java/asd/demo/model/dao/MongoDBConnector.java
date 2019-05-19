@@ -24,9 +24,7 @@ public class MongoDBConnector implements Serializable{
 
     private List<Document> users = new ArrayList();
     private MongoClientURI uri;
-    //private MongoClient client;
-    //private MongoDBClientImpl clientImpl;
-    private MongoDatabase db;
+    //private MongoDatabase db;
     private String owner;
     private String password;
 
@@ -45,18 +43,21 @@ public class MongoDBConnector implements Serializable{
     //Replace the mLab URL with your Team current URL
     private void connect() throws UnknownHostException {
         uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
-        MongoDBClientImpl clientImpl = new MongoDBClientImpl(uri);
-        MongoClient client = new MongoClient(uri);        
-        db = client.getDatabase(uri.getDatabase());
+        //MongoClient client = new MongoClient(uri);        
+        //db = client.getDatabase(uri.getDatabase());
     }
 
     public void add(User user) {
+        MongoClient client = new MongoClient(uri);        
+        MongoDatabase db = client.getDatabase(uri.getDatabase());
         users.add(new Document("Username", user.getEmail()).append("Password", user.getPassword()).append("Name", user.getName()).append("Phone", user.getPhone()));
         MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users"); //Create a collection ASD-Demo-app-users on mLab
         userlist.insertMany(users);
     }
 
     public void showUsers() {
+        MongoClient client = new MongoClient(uri);        
+        MongoDatabase db = client.getDatabase(uri.getDatabase());
         MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
         try (MongoCursor<Document> cursor = userlist.find().iterator()) {
             while (cursor.hasNext()) {
@@ -66,6 +67,8 @@ public class MongoDBConnector implements Serializable{
     }
 
     public Users loadUsers() {
+        MongoClient client = new MongoClient(uri);        
+        MongoDatabase db = client.getDatabase(uri.getDatabase());
         Users users = new Users();
         MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
         for (Document doc : userlist.find()) {
@@ -76,21 +79,11 @@ public class MongoDBConnector implements Serializable{
     }
 
     public User user(String email,String password) {
+        MongoClient client = new MongoClient(uri);        
+        MongoDatabase db = client.getDatabase(uri.getDatabase());
         MongoCollection<Document> userlist = db.getCollection("ASD-Demo-app-users");
         Document doc = userlist.find(and(eq("Username", email),eq("Password",password))).first();
         User user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
         return user;
-    }
-/*
-    public void close() {
-        client.close();
-    }
-
-    public MongoClient getClient() {
-        return this.client;
-    }
-*/
-    public MongoDatabase getMDB() {
-        return db;
-    }
+    }   
 }
