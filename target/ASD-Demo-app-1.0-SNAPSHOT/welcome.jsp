@@ -37,7 +37,7 @@
         session.setAttribute("user", user);
         users.addUser(user);
         userApp.updateXML(users, filePath);
-        //MongoDBConnector connector = (MongoDBConnector)session.getAttribute("connector");
+        
         String adminemail = (String)session.getAttribute("adminemail");
         String adminpass = (String)session.getAttribute("adminpassword");
         MongoDBConnector connector = new MongoDBConnector(adminemail, adminpass);

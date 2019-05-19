@@ -24,13 +24,10 @@ public class MongoDBConnector {
     private List<Document> users = new ArrayList();
     private String owner;
     private String password;
-    //private MongoClientURI uri;    
-   // private MongoClient client;
-    //private MongoDatabase db;
+   
     public MongoDBConnector(String owner, String password) throws UnknownHostException {
         this.owner = owner;
-        this.password = password;
-        //connect();
+        this.password = password;      
     }
 
     public void showall(Users users) {
@@ -38,13 +35,7 @@ public class MongoDBConnector {
             System.out.println(u.getName());
         }
     }
-    /*
-    //Replace the mLab URL with your Team current URL
-    private void connect() throws UnknownHostException {
-        uri = new MongoClientURI("mongodb://" + owner + ":" + password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
-        client = new MongoClient(uri);        
-        db = client.getDatabase(uri.getDatabase());
-    }*/
+    
     public void add(User user) {    
         MongoClientURI uri = new MongoClientURI("mongodb://" + this.owner + ":" + this.password + "@ds029496.mlab.com:29496/heroku_59pxdn6j");
         try (MongoClient client = new MongoClient(uri)) {
