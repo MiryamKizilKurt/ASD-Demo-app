@@ -6,7 +6,7 @@
         <title>Login Action</title>
     </head>
     <body>
-        <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
+        <% String filePath = application.getRealPath("users.xml");%>
         <jsp:useBean id="userApp" class="asd.demo.controller.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
