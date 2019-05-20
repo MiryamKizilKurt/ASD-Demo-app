@@ -2,13 +2,9 @@ package asd.demo.model;
 
 import java.io.Serializable;
 import java.util.*;
-import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "users")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Users implements Serializable{
-
-    @XmlElement(name = "user")
+   
     private ArrayList<User> list = new ArrayList<>();
 
     public Users() {

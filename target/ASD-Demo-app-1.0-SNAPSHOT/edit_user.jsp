@@ -9,15 +9,9 @@
         <title>Edit</title>
     </head>
     <body style="background:none transparent;">
-        <% String filePath = application.getRealPath("users.xml");%>
-
-        <jsp:useBean id="userApp" class="asd.demo.controller.UserApplication" scope="application">
-            <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
-        </jsp:useBean>
-        <%Users users = userApp.getUsers(); %>
+        
         <%
-            User user = (User) session.getAttribute("user");
-            users.deleteUser(user.getEmail());
+            User user = (User) session.getAttribute("user");            
         %>
 
         <p class="form_title">My Account</p>
@@ -31,9 +25,7 @@
                 <tr><td></td><td><input type="submit" value="Save" class="button"></td></tr>
             </table>
             <%
-                session.setAttribute("user", user);
-                users.addUser(user);
-                userApp.updateXML(users, filePath);
+                session.setAttribute("user", user);                
             %>
         </form>
 

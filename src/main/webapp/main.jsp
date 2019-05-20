@@ -21,12 +21,7 @@
             <div class="container">
                  <h1>ASD  Demo Application</h1>                        
                  <p class="p">Java Maven Web Application</p>                 
-            </div>
-            <% String filePath = application.getRealPath("users.xml");%>
-            <jsp:useBean id="userApp" class="asd.demo.controller.UserApplication" scope="application">
-                <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
-            </jsp:useBean>
-            <%Users users = userApp.getUsers(); %>
+            </div>           
             <%
                 User user = (User) session.getAttribute("user");
                 if (user != null) {
