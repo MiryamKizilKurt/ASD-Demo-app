@@ -19,8 +19,8 @@
         <div class="bs-docs-header" id="content" tabindex="-1">
             <span class="time" id="time" ></span>
             <div class="container">
-                 <h1>ASD  Demo Application</h1>                        
-                 <p class="p">Java Maven Web Application</p>                 
+                <h1>ASD  Demo Application</h1>                        
+                <p class="p">Java Maven Web Application</p>                 
             </div>           
             <%
                 User user = (User) session.getAttribute("user");
@@ -28,12 +28,11 @@
                     String log = " &lt " + user.getName() + " &gt";
 
             %>
-            <%
-                 String status = (String)session.getAttribute("status");        
+            <%                String status = (String) session.getAttribute("status");
             %>
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
-                    <div class="navbar-header">
+                    <div class="navbar-header">                        
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>                                                         
@@ -44,8 +43,8 @@
                             <div class="led-box">
                                 <div class="<%= (status != null) ? "led-green" : "led-red"%>"></div>                                
                             </div>                            
-                        </div>
-                    </div>
+                        </div>                    
+                    </div>              
                     <ul class="nav navbar-nav navbar-right">                            
                         <li><a href="logout.jsp" id="Logout-Tab" ><span style="color:#70bd24; font-size: 14px;">You are logging in as: <%=log%></span>&emsp;<span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
                             <%} else {%>
