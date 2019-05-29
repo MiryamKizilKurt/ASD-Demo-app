@@ -47,6 +47,13 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right"> 
                             <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">ASD Course<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://docs.google.com/presentation/d/1Zg3xJ7rOu3LqL7QMpJZPXD4iNdfpaznTaljKAYcOSkQ/edit?usp=sharing" target="_Blank" style="color:#cdbfe3;">Applied DevOps</a></li>
+                                    <li><a href="http://handbook.uts.edu.au/subjects/41026.html" target="_Blank" style="color:#cdbfe3; ">ASD 41026</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Author<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="https://www.linkedin.com/in/georges-bou-ghantous/" target="_Blank" style="color:#cdbfe3;">Linked In</a></li>
