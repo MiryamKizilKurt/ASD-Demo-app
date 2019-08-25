@@ -46,5 +46,4 @@ public class MLabLoginFeature {
     public void i_should_see_red(String arg1) throws Throwable {
         System.out.println("mLab connection unsuccessful!");
     }    
-
 }

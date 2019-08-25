@@ -1,4 +1,4 @@
-# Login Feature
+# MLabLogin Feature
 # language: en
 @MLabLoginProfile
 Feature: MLabLoginFeature
