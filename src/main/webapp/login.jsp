@@ -27,10 +27,10 @@
             <form class="login-form" action="ValidatorServlet" method="post" target="_parent">
                 <p class="form_title">Login Details:  </p>&emsp;<span class="error"> <c:if test="${emptyErr!=null}"><c:out value="${emptyErr}"/></c:if></span>
                     <div class="form-group" id="username">
-                        <input class="form-input" placeholder="Email" name="email" required="true">&emsp;<span class="error"><c:if test="${emailErr!=null}"><c:out value="${emailErr}"/></c:if></span>                                       
+                        <input class="form-input" placeholder="Email" name="email" id="email" required="true">&emsp;<span class="error"><c:if test="${emailErr!=null}"><c:out value="${emailErr}"/></c:if></span>                                       
                     </div>
                     <div class="form-group" id="password">
-                        <input type="password" class="form-input" name ="password" placeholder="Password" required="true">&emsp;<span class="error"><c:if test="${passErr!=null}"><c:out value="${passErr}"/></c:if></span>
+                        <input type="password" class="form-input" name ="password" id="password" placeholder="Password" required="true">&emsp;<span class="error"><c:if test="${passErr!=null}"><c:out value="${passErr}"/></c:if></span>
                     </div>
                     <div class="form-group">
                         <input type="submit" id="login" value="Login" class="login-button"/>                    

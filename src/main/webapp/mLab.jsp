@@ -28,7 +28,7 @@
                         <input class="form-input" placeholder="Admin ID" name="adminemail" id="adminemail" required="true">                                       
                     </div>
                     <div class="form-group" id="password">
-                        <input type="password" class="form-input" name ="adminpassword" id="adminpassword" placeholder="Password" required="true">
+                        <input type="password" class="form-input" name ="adminpassword" id="adminpassword" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <input type="submit" id="mLab_login" value="Connect" class="login-button"/>                    
