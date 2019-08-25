@@ -1,20 +1,20 @@
 # Login Feature
 # language: en
 @MLabLoginProfile
-Feature: MLabLogin Profile
+Feature: MLabLoginFeature
   As a student of ASD subject
-  I want to login my ASD mLab profile using my admin credentials
+  I want to login my ASD mLab account using my admin credentials
   In order to connect to mLab cloud database
 
-  Background: User navigates to ASD-Demo-app home Given
-    Given I am on the "ASD Demo Home" page on URL "https://asd-demo-app.herokuapp.com/mLab.jsp"
-     
-  Scenario: Successful login      
+Background: User navigates to mLab login page 
+   Given I am on mLab login page 
+
+  Scenario: Successful login to mLab      
     When I fill in "Username" with "Georges034302"
     And I fill in "Password" with "darkside666"
     Then I should see "mLab Connection" green
  
-  Scenario Outline: Failed login using wrong credentials
+  Scenario Outline: Failed login to mLab using wrong credentials
     When I fill in "Username" with "<username>"
     And I fill in "Password" with "<password>"
     Then I should see "mLab Connection" red

@@ -14,30 +14,20 @@
     "elements": [
       {
         "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
+        "name": "User navigates to mLab login page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 8836508305,
+              "duration": 8896158801,
               "status": "passed"
             },
             "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
+            "name": "I am on mLab login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
+              "location": "MLabLoginFeature.i_am_on_mLab_login_page()"
             },
             "keyword": "Given "
           }
@@ -45,15 +35,15 @@
       },
       {
         "line": 12,
-        "name": "Successful login",
+        "name": "Successful login to mLab",
         "description": "",
-        "id": "mlablogin-profile;successful-login",
+        "id": "mlabloginfeature;successful-login-to-mlab",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2687608653,
+              "duration": 3983024519,
               "status": "passed"
             },
             "line": 13,
@@ -75,9 +65,8 @@
           },
           {
             "result": {
-              "duration": 20807133,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #adminemail\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027GEORGE-PC\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_91\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 6868, moz:profile: C:\\Users\\George\\AppData\\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 19dccbf0-bd43-4e2d-b615-5f49ce6a0984\n*** Element info: {Using\u003did, value\u003dadminemail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat asd.demo.test.MLabLoginFeature.i_fill_in_with(MLabLoginFeature.java:33)\r\n\tat ✽.And I fill in \"Password\" with \"darkside666\"(MLabLoginFeature.feature:14)\r\n",
-              "status": "failed"
+              "duration": 1851144840,
+              "status": "passed"
             },
             "line": 14,
             "name": "I fill in \"Password\" with \"darkside666\"",
@@ -98,7 +87,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 796739,
+              "status": "passed"
             },
             "line": 15,
             "name": "I should see \"mLab Connection\" green",
@@ -117,30 +107,20 @@
       },
       {
         "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
+        "name": "User navigates to mLab login page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 7166403150,
+              "duration": 6892658632,
               "status": "passed"
             },
             "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
+            "name": "I am on mLab login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
+              "location": "MLabLoginFeature.i_am_on_mLab_login_page()"
             },
             "keyword": "Given "
           }
@@ -148,15 +128,15 @@
       },
       {
         "line": 23,
-        "name": "Failed login using wrong credentials",
+        "name": "Failed login to mLab using wrong credentials",
         "description": "",
-        "id": "mlablogin-profile;failed-login-using-wrong-credentials;;2",
+        "id": "mlabloginfeature;failed-login-to-mlab-using-wrong-credentials;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2707160864,
+              "duration": 4363814280,
               "status": "passed"
             },
             "line": 18,
@@ -181,9 +161,8 @@
           },
           {
             "result": {
-              "duration": 11310800,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #adminemail\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027GEORGE-PC\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_91\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 21632, moz:profile: C:\\Users\\George\\AppData\\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: f3df56c1-abfb-4789-a224-c1ff28d0c1fd\n*** Element info: {Using\u003did, value\u003dadminemail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat asd.demo.test.MLabLoginFeature.i_fill_in_with(MLabLoginFeature.java:33)\r\n\tat ✽.And I fill in \"Password\" with \"!23\"(MLabLoginFeature.feature:19)\r\n",
-              "status": "failed"
+              "duration": 2016091820,
+              "status": "passed"
             },
             "line": 19,
             "name": "I fill in \"Password\" with \"!23\"",
@@ -207,7 +186,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 85155,
+              "status": "passed"
             },
             "line": 20,
             "name": "I should see \"mLab Connection\" red",
@@ -232,30 +212,20 @@
       },
       {
         "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
+        "name": "User navigates to mLab login page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 7181352016,
+              "duration": 6932054760,
               "status": "passed"
             },
             "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
+            "name": "I am on mLab login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
+              "location": "MLabLoginFeature.i_am_on_mLab_login_page()"
             },
             "keyword": "Given "
           }
@@ -263,245 +233,15 @@
       },
       {
         "line": 24,
-        "name": "Failed login using wrong credentials",
+        "name": "Failed login to mLab using wrong credentials",
         "description": "",
-        "id": "mlablogin-profile;failed-login-using-wrong-credentials;;3",
+        "id": "mlabloginfeature;failed-login-to-mlab-using-wrong-credentials;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2792827055,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I fill in \"Username\" with \"Tset\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Username",
-                  "offset": 11
-                },
-                {
-                  "val": "Tset",
-                  "offset": 27
-                }
-              ],
-              "location": "MLabLoginFeature.i_fill_in_with(String,String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 16597737,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #adminemail\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027GEORGE-PC\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_91\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 28780, moz:profile: C:\\Users\\George\\AppData\\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: bca023b3-32d7-405a-aa52-acf24201ac03\n*** Element info: {Using\u003did, value\u003dadminemail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat asd.demo.test.MLabLoginFeature.i_fill_in_with(MLabLoginFeature.java:33)\r\n\tat ✽.And I fill in \"Password\" with \"123\"(MLabLoginFeature.feature:19)\r\n",
-              "status": "failed"
-            },
-            "line": 19,
-            "name": "I fill in \"Password\" with \"123\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "123",
-                  "offset": 27
-                }
-              ],
-              "location": "MLabLoginFeature.i_fill_in_with(String,String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "I should see \"mLab Connection\" red",
-            "match": {
-              "arguments": [
-                {
-                  "val": "mLab Connection",
-                  "offset": 14
-                }
-              ],
-              "location": "MLabLoginFeature.i_should_see_red(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@MLabLoginProfile"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 7153180060,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 25,
-        "name": "Failed login using wrong credentials",
-        "description": "",
-        "id": "mlablogin-profile;failed-login-using-wrong-credentials;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2566445462,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I fill in \"Username\" with \"Tset\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Username",
-                  "offset": 11
-                },
-                {
-                  "val": "Tset",
-                  "offset": 27
-                }
-              ],
-              "location": "MLabLoginFeature.i_fill_in_with(String,String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10333734,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #adminemail\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027GEORGE-PC\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_91\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 17632, moz:profile: C:\\Users\\George\\AppData\\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 6a571ecb-98cc-4cdb-b9aa-ff7f7d65cf86\n*** Element info: {Using\u003did, value\u003dadminemail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat asd.demo.test.MLabLoginFeature.i_fill_in_with(MLabLoginFeature.java:33)\r\n\tat ✽.And I fill in \"Password\" with \"!23\"(MLabLoginFeature.feature:19)\r\n",
-              "status": "failed"
-            },
-            "line": 19,
-            "name": "I fill in \"Password\" with \"!23\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Password",
-                  "offset": 11
-                },
-                {
-                  "val": "!23",
-                  "offset": 27
-                }
-              ],
-              "location": "MLabLoginFeature.i_fill_in_with(String,String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 20,
-            "name": "I should see \"mLab Connection\" red",
-            "match": {
-              "arguments": [
-                {
-                  "val": "mLab Connection",
-                  "offset": 14
-                }
-              ],
-              "location": "MLabLoginFeature.i_should_see_red(String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 3,
-            "name": "@MLabLoginProfile"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6928477098,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "line": 26,
-        "name": "Failed login using wrong credentials",
-        "description": "",
-        "id": "mlablogin-profile;failed-login-using-wrong-credentials;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 2532520722,
+              "duration": 4031103742,
               "status": "passed"
             },
             "line": 18,
@@ -526,9 +266,8 @@
           },
           {
             "result": {
-              "duration": 9607123,
-              "error_message": "org.openqa.selenium.NoSuchElementException: Unable to locate element: #adminemail\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027GEORGE-PC\u0027, ip: \u0027192.168.0.8\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_91\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 29656, moz:profile: C:\\Users\\George\\AppData\\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 622a7dac-379f-4031-a728-4f95d545fcd4\n*** Element info: {Using\u003did, value\u003dadminemail}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat asd.demo.test.MLabLoginFeature.i_fill_in_with(MLabLoginFeature.java:33)\r\n\tat ✽.And I fill in \"Password\" with \"\"(MLabLoginFeature.feature:19)\r\n",
-              "status": "failed"
+              "duration": 1734549341,
+              "status": "passed"
             },
             "line": 19,
             "name": "I fill in \"Password\" with \"\"",
@@ -552,7 +291,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 105780,
+              "status": "passed"
             },
             "line": 20,
             "name": "I should see \"mLab Connection\" red",
@@ -577,46 +317,36 @@
       },
       {
         "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
+        "name": "User navigates to mLab login page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 7011823199,
+              "duration": 6927629679,
               "status": "passed"
             },
             "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
+            "name": "I am on mLab login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
+              "location": "MLabLoginFeature.i_am_on_mLab_login_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 27,
-        "name": "Failed login using wrong credentials",
+        "line": 25,
+        "name": "Failed login to mLab using wrong credentials",
         "description": "",
-        "id": "mlablogin-profile;failed-login-using-wrong-credentials;;6",
+        "id": "mlabloginfeature;failed-login-to-mlab-using-wrong-credentials;;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 277667513,
+              "duration": 3989540155,
               "status": "passed"
             },
             "line": 18,
@@ -641,7 +371,7 @@
           },
           {
             "result": {
-              "duration": 2283636274,
+              "duration": 1799085165,
               "status": "passed"
             },
             "line": 19,
@@ -666,7 +396,7 @@
           },
           {
             "result": {
-              "duration": 942592,
+              "duration": 115209,
               "status": "passed"
             },
             "line": 20,
@@ -692,46 +422,36 @@
       },
       {
         "line": 9,
-        "name": "User navigates to ASD-Demo-app home Given",
+        "name": "User navigates to mLab login page",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 7001235180,
+              "duration": 6660501273,
               "status": "passed"
             },
             "line": 10,
-            "name": "I am on the \"ASD Demo Home\" page on URL \"https://asd-demo-app.herokuapp.com/mLab.jsp\"",
+            "name": "I am on mLab login page",
             "match": {
-              "arguments": [
-                {
-                  "val": "ASD Demo Home",
-                  "offset": 13
-                },
-                {
-                  "val": "https://asd-demo-app.herokuapp.com/mLab.jsp",
-                  "offset": 41
-                }
-              ],
-              "location": "MLabLoginFeature.i_am_on_the_page_on_URL(String,String)"
+              "location": "MLabLoginFeature.i_am_on_mLab_login_page()"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "line": 28,
-        "name": "Failed login using wrong credentials",
+        "line": 26,
+        "name": "Failed login to mLab using wrong credentials",
         "description": "",
-        "id": "mlablogin-profile;failed-login-using-wrong-credentials;;7",
+        "id": "mlabloginfeature;failed-login-to-mlab-using-wrong-credentials;;5",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 286118716,
+              "duration": 3058314250,
               "status": "passed"
             },
             "line": 18,
@@ -756,7 +476,7 @@
           },
           {
             "result": {
-              "duration": 279045894,
+              "duration": 1730952822,
               "status": "passed"
             },
             "line": 19,
@@ -781,7 +501,7 @@
           },
           {
             "result": {
-              "duration": 103128,
+              "duration": 121102,
               "status": "passed"
             },
             "line": 20,
@@ -806,9 +526,9 @@
         ]
       }
     ],
-    "name": "MLabLogin Profile",
-    "description": "As a student of ASD subject\r\nI want to login my ASD mLab profile using my admin credentials\r\nIn order to connect to mLab cloud database",
-    "id": "mlablogin-profile",
+    "name": "MLabLoginFeature",
+    "description": "As a student of ASD subject\r\nI want to login my ASD mLab account using my admin credentials\r\nIn order to connect to mLab cloud database",
+    "id": "mlabloginfeature",
     "keyword": "Feature",
     "uri": "MLabLoginFeature.feature",
     "tags": [
