@@ -25,13 +25,13 @@
             <form class="login-form" action="ConnServlet" method="post" target="_parent">
                 <p class="form_title">MLab Admin Login:  </p>&emsp;<span class="error"> <c:if test="${status!=null}"><c:out value="${status}"/></c:if></span>
                     <div class="form-group" id="username">
-                        <input class="form-input" placeholder="Admin ID" name="adminemail" required="true">                                       
+                        <input class="form-input" placeholder="Admin ID" name="adminemail" id="adminemail" required="true">                                       
                     </div>
                     <div class="form-group" id="password">
-                        <input type="password" class="form-input" name ="adminpassword" placeholder="Password" required="true">
+                        <input type="password" class="form-input" name ="adminpassword" id="adminpassword" placeholder="Password" required="true">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Connect" class="login-button"/>                    
+                        <input type="submit" id="mLab_login" value="Connect" class="login-button"/>                    
                     </div>
                 </form>         
             </div>        

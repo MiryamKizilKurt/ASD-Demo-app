@@ -33,7 +33,7 @@
                         <input type="password" class="form-input" name ="password" placeholder="Password" required="true">&emsp;<span class="error"><c:if test="${passErr!=null}"><c:out value="${passErr}"/></c:if></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="login-button"/>                    
+                        <input type="submit" id="login" value="Login" class="login-button"/>                    
                     </div>
                 </form>         
             </div>        
