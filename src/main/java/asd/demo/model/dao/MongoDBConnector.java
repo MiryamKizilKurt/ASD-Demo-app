@@ -93,13 +93,5 @@ public class MongoDBConnector {
             user = new User((String) doc.get("Name"), (String) doc.get("Username"), (String) doc.get("Password"), (String) doc.get("Phone"));
         }
         return user;
-    }
-
-    public int add(int a, int b) {
-        return a + b;
-    }
-
-    public int subtract(int a, int b) {
-        return a - b;
-    }
+    }    
 }

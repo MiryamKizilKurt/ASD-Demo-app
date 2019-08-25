@@ -97,10 +97,10 @@
             <artifactId>hamcrest-core</artifactId>
             <version>1.3</version>
             <scope>test</scope>
-        </dependency>        
+        </dependency>               
     </dependencies>
     <build>
-        <plugins>
+        <plugins>            
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>appengine-maven-plugin</artifactId>
