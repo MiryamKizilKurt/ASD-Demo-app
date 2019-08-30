@@ -24,7 +24,7 @@ public class UnitTest {
     @BeforeClass //Create an instance of MongoDBConnector using admin credentials for mLab
     public static void setUpClass() throws UnknownHostException {
         System.out.println("\n<-- Starting Unit test -->");  
-        mdb = new MongoDBConnector("Georges034302","darkside666");      
+        mdb = new MongoDBConnector("<mLab Username>","<mLab Password>");      
     }
     
     @Test
@@ -34,11 +34,11 @@ public class UnitTest {
     }
        
     @Test 
-    public void fectUsers(){
+    public void fetchUsers(){
         Users users = mdb.loadUsers();
-        Assert.assertNotNull("MLab users data successfully fecthed",users);
-        System.out.println("\nUsers");
-        System.out.println("--------");
+        Assert.assertNotNull("Cannot fetch ASD users",users);
+        System.out.println("\nFetching ASD users...");
+        System.out.println("-------------------------------------");
         mdb.showall(users);
     }
     
